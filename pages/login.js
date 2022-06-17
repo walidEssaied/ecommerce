@@ -61,7 +61,7 @@ export default function LoginScreen() {
             autoFocus
           ></input>
           {errors.email && (
-            <div className="text-red-500">{errors.email.message}</div>
+            <div className="text-red-500 ">{errors.email.message}</div>
           )}
         </div>
         <div className="mb-4">

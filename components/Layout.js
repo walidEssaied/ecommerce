@@ -15,6 +15,7 @@ export default function Layout({ title, children }) {
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
   const [cartItemsCount, setCartItemsCount] = useState(0);
+
   useEffect(() => {
     setCartItemsCount(cart.cartItems.reduce((a, c) => a + c.quantity, 0));
   }, [cart.cartItems]);
@@ -44,7 +45,7 @@ export default function Layout({ title, children }) {
             <div className="flex items-center justify-between  w-5/6 mx-auto">
               <Link href="/">
                 <a className="text-lg font-bold text-yellow-500">
-                  Ecommerce - Walid Essaied
+                  Ecommerce - Helmy slimene
                 </a>
               </Link>
               <div>
@@ -93,16 +94,20 @@ export default function Layout({ title, children }) {
                   </Menu>
                 ) : (
                   <Link href="/login">
-                    <a className="p-2 text-white font-semibold hover:text-yellow-400">🔐 Login</a>
+                    <a className="p-2 text-white font-semibold hover:text-yellow-400">
+                      🔐 Login
+                    </a>
                   </Link>
                 )}
               </div>
             </div>
           </nav>
         </header>
-        <main className="max-w-7xl mx-auto mt-4 px-4 bg-g">{children}</main>
+        <main className="max-w-7xl mx-auto mt-4 px-4">
+          {children}
+        </main>
         <footer className="flex h-10 justify-center items-center shadow-inner">
-          <p>Copyright © 2022 Ecommerce | Walid Essaied</p>
+          <p>Copyright © 2022 Ecommerce | Helmy Slimene</p>
         </footer>
       </div>
     </>
