@@ -24,8 +24,8 @@ $ Open http://localhost:3000
 
 ## Chapters
 
-1. Introduction
-2. Install Tools
+1. Introduction to nextJS
+2. Install Tools (vscode, mongodb, nodejs)
 3. Create Next App
 4. Publish to Github
 5. Create Website Layout
